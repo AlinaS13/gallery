@@ -1,0 +1,54 @@
+.text {
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 12.5vh;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.text__wrapper {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+}
+
+.text__slide {
+  position: relative;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.text__slide span {
+  display: inline-block;
+  max-width: 90vw;
+  padding: 0.3125rem 0.625rem;
+  background-color: #000;
+  text-transform: uppercase;
+  font-size: 4vh;
+}
+
+@media (max-aspect-ratio: 3/2) {
+  .text__slide span {
+    font-size: 3.5vw;
+  }
+}
+
+@media (min-width: 991px) {
+  .text__slide span {
+    max-width: 48vw;
+  }
+}
+
+.open-image {
+  cursor: pointer;
+}
+.text.active {
+  transform: translate(-50%, 100%);
+  opacity: 0;
+}
